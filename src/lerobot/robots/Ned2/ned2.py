@@ -22,7 +22,7 @@ from typing import Any
 import shutil
 
 from lerobot.cameras.utils import make_cameras_from_configs
-from lerobot.constants import OBS_STATE
+from lerobot.utils.constants import OBS_STATE
 from lerobot.errors import DeviceAlreadyConnectedError, DeviceNotConnectedError
 from lerobot.motors import Motor, MotorCalibration, MotorNormMode
 from lerobot.motors.dynamixel import (
