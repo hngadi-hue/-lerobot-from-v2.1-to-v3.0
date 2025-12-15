@@ -77,6 +77,10 @@ def make_teleoperator_from_config(config: TeleoperatorConfig) -> Teleoperator:
         from .reachy2_teleoperator import Reachy2Teleoperator
 
         return Reachy2Teleoperator(config)
+    elif config.type == "ned2_leader":
+        from .ned2_leader import Ned2Leader
+    
+        return Ned2Leader(config)
     else:
         try:
             return cast(Teleoperator, make_device_from_device_class(config))
